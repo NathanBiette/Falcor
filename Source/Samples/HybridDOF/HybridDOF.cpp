@@ -68,7 +68,7 @@ bool HybridDOF::onKeyEvent(const KeyboardEvent& keyEvent)
 
 bool HybridDOF::onMouseEvent(const MouseEvent& mouseEvent)
 {
-    return false;
+    return mpScene && mpScene->onMouseEvent(mouseEvent);
 }
 
 void HybridDOF::onHotReload(HotReloadFlags reloaded)
@@ -77,14 +77,15 @@ void HybridDOF::onHotReload(HotReloadFlags reloaded)
 
 void HybridDOF::onResizeSwapChain(uint32_t width, uint32_t height)
 {
+    // don't resize
 }
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
     HybridDOF::UniquePtr pRenderer = std::make_unique<HybridDOF>();
     SampleConfig config;
-    config.windowDesc.title = "Falcor Project Template";
-    config.windowDesc.resizableWindow = true;
+    config.windowDesc.title = "HybridDoF";
+    config.windowDesc.resizableWindow = false;
     Sample::run(config, pRenderer);
     return 0;
 }
