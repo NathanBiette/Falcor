@@ -22,7 +22,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{605856E4-34D4-40DF-B859-EEA3A7D52A7B}</ProjectGuid>
+    <ProjectGuid>{6A2BFD81-EF46-44DC-AEA3-B868D5036677}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>HybridDOF</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
