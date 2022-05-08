@@ -578,10 +578,11 @@ namespace Falcor
         bool dumpIR = is_set(mDesc.getCompilerFlags(), Shader::CompilerFlags::DumpIntermediates);
         spSetDumpIntermediates(pSlangRequest, dumpIR);
 
-        if (sGenerateDebugInfo || is_set(mDesc.getCompilerFlags(), Shader::CompilerFlags::GenerateDebugInfo))
-        {
-            spSetDebugInfoLevel(pSlangRequest, SLANG_DEBUG_INFO_LEVEL_STANDARD);
-        }
+        //if (sGenerateDebugInfo || is_set(mDesc.getCompilerFlags(), Shader::CompilerFlags::GenerateDebugInfo))
+        //{
+            spSetDebugInfoLevel(pSlangRequest, SLANG_DEBUG_INFO_LEVEL_MAXIMAL);
+            //spSetOptimizationLevel(pSlangRequest, SLANG_OPTIMIZATION_LEVEL_NONE);
+        //}
 
         // Configure any flags for the Slang compilation step
         SlangCompileFlags slangFlags = 0;

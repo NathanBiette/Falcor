@@ -28,7 +28,8 @@
 #include "HelloDXR.h"
 
 static const float4 kClearColor(0.38f, 0.52f, 0.10f, 1);
-static const std::string kDefaultScene = "Arcade/Arcade.pyscene";
+//static const std::string kDefaultScene = "Arcade/Arcade.pyscene";
+static const std::string kDefaultScene = "pink_room/pink_room.pyscene";
 
 void HelloDXR::onGuiRender(Gui* pGui)
 {
