@@ -56,11 +56,11 @@ public:
 private:
     DOFPostProcess();
     Fbo::SharedPtr mpFbo;
-    GraphicsState::SharedPtr mpState;
+    //GraphicsState::SharedPtr mpState;
     ResourceFormat mTiledDepthFormat = ResourceFormat::RGBA16Float;
 
     GraphicsProgram::SharedPtr mpTilingProgram;
-    GraphicsVars::SharedPtr mpVars;
+    //GraphicsVars::SharedPtr mpVars;
     Scene::SharedPtr                mpScene;                    ///< The current scene, or nullptr if no scene loaded.
     FullScreenPass::SharedPtr mpPass;
 };

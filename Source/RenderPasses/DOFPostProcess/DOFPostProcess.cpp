@@ -78,9 +78,9 @@ DOFPostProcess::DOFPostProcess()
     //mpTilingProgram = GraphicsProgram::create(desc);
     mpPass = FullScreenPass::create(kTilingShader);
     //mpTilingProgram = GraphicsProgram::createFromFile("kTilingShader", "vsMain", "psMain");
-    mpVars = GraphicsVars::create(mpTilingProgram->getReflector());
-    mpState = GraphicsState::create();
-    mpState->setProgram(mpTilingProgram);
+    //mpVars = GraphicsVars::create(mpTilingProgram->getReflector());
+    //mpState = GraphicsState::create();
+    //mpState->setProgram(mpTilingProgram);
     mpFbo = Fbo::create();
 
     //parseDictionary(dict);
