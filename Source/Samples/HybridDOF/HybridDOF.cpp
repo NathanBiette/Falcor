@@ -68,7 +68,8 @@ bool HybridDOF::onKeyEvent(const KeyboardEvent& keyEvent)
 
 bool HybridDOF::onMouseEvent(const MouseEvent& mouseEvent)
 {
-    return mpScene && mpScene->onMouseEvent(mouseEvent);
+    return false;
+    //return mpScene && mpScene->onMouseEvent(mouseEvent);
 }
 
 void HybridDOF::onHotReload(HotReloadFlags reloaded)

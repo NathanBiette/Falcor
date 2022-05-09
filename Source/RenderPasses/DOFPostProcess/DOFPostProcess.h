@@ -49,10 +49,18 @@ public:
     virtual void compile(RenderContext* pRenderContext, const CompileData& compileData) override {}
     virtual void execute(RenderContext* pRenderContext, const RenderData& renderData) override;
     virtual void renderUI(Gui::Widgets& widget) override;
-    virtual void setScene(RenderContext* pRenderContext, const Scene::SharedPtr& pScene) override {}
+    virtual void setScene(RenderContext* pRenderContext, const Scene::SharedPtr& pScene) override;
     virtual bool onMouseEvent(const MouseEvent& mouseEvent) override { return false; }
     virtual bool onKeyEvent(const KeyboardEvent& keyEvent) override { return false; }
 
 private:
-    DOFPostProcess() : RenderPass(kInfo) {}
+    DOFPostProcess();
+    Fbo::SharedPtr mpFbo;
+    GraphicsState::SharedPtr mpState;
+    ResourceFormat mTiledDepthFormat = ResourceFormat::RGBA16Float;
+
+    GraphicsProgram::SharedPtr mpTilingProgram;
+    GraphicsVars::SharedPtr mpVars;
+    Scene::SharedPtr                mpScene;                    ///< The current scene, or nullptr if no scene loaded.
+    FullScreenPass::SharedPtr mpPass;
 };
